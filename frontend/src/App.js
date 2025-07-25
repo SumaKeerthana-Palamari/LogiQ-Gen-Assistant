@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 // IMPORTANT: Replace this with your actual Render backend URL
-const API_BASE = process.env.REACT_APP_API_URL || 'https://your-backend-name.onrender.com/api';
+const API_BASE = process.env.REACT_APP_API_URL || 'https://logiq-gen-assistant-1.onrender.com/api';
 
 // Generate UUID
 const generateId = () => Math.random().toString(36).substr(2, 9);
