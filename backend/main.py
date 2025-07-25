@@ -8,6 +8,25 @@ import re
 import random
 import threading
 import uvicorn
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# Load environment variables
+load_dotenv()
+
+# OpenAI client setup
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    logger.warning("OPENAI_API_KEY not found in environment variables")
+    openai_client = None
+else:
+    try:
+        openai_client = OpenAI(api_key=openai_api_key)
+        logger.info("OpenAI client initialized successfully")
+    except Exception as e:
+        logger.error(f"Failed to initialize OpenAI client: {e}")
+        openai_client = None
 
 # FastAPI app
 app = FastAPI(title="LogiQ Gen Professional Chatbot", version="1.0.0")
