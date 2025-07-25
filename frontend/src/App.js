@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
-// IMPORTANT: Replace this with your actual Render backend URL
+// Updated to use your actual Render backend URL
 const API_BASE = process.env.REACT_APP_API_URL || 'https://logiq-gen-assistant-1.onrender.com/api';
 
 // Generate UUID
