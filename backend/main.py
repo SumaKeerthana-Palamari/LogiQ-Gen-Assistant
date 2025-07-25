@@ -15,7 +15,12 @@ app = FastAPI(title="LogiQ Gen Professional Chatbot", version="1.0.0")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://logi-q-gen-assistant-6fia.vercel.app"],
+    allow_origins=[
+        "http://localhost:3000", 
+        "http://localhost:3001",
+        "https://https://logi-q-gen-assistant-6fia.vercel.app/",
+        "https://*.vercel.app"  # Allow all Vercel preview deployments
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
