@@ -1,0 +1,15 @@
+# python git ignore file
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+*.pyzw
+*.pyzwz
+venv/
+.venv/
+
+
