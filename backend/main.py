@@ -18,7 +18,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000", 
         "http://localhost:3001",
-        "https://https://logi-q-gen-assistant-6fia.vercel.app/",
+        "https://logi-q-gen-assistant-6fia.vercel.app",  # Your actual Vercel URL
         "https://*.vercel.app"  # Allow all Vercel preview deployments
     ],
     allow_credentials=True,
@@ -298,4 +298,6 @@ async def get_system_stats():
         raise HTTPException(status_code=500, detail="Failed to get system statistics")
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
