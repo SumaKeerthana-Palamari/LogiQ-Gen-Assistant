@@ -34,7 +34,7 @@ function App() {
   const initializeSession = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`${API_BASE}/chat/session/new`, {
+      const response = await fetch(`https://logiq-gen-assistant-1.onrender.com`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       });
