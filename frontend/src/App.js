@@ -34,14 +34,13 @@ function App() {
   const initializeSession = async () => {
     try {
       setIsLoading(true);
-      fetch("https://logiq-gen-assistant-1.onrender.com/chat", {
+fetch("https://logiq-gen-assistant-1.onrender.com/chat", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({ message: userInput }),
-});
-
+})
 
       if (!response.ok) throw new Error('Failed to create session');
 
